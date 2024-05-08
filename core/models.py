@@ -39,7 +39,7 @@ class Depositor(models.Model):
     email = models.CharField('Почта', max_length=50, blank=True)
     telephone = models.CharField('Телефон', max_length=12, blank=True)
     role = models.CharField('Роль', max_length=20, choices=role_choices)
-    birthday = models.DateField('День рождения', null=True, blank=True)
+    birthday = models.DateField('День рождения', null=True, blank=True, default=timezone.now)
     bank = models.ForeignKey(Bank, on_delete=models.CASCADE)
 
     def __str__(self):
