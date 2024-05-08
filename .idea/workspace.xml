@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1b9ad880-db38-479b-956d-be0d0672e5fc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/migrations/0002_alter_bankowner_options_alter_currency_options_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/migrations/0003_person_telephone.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/migrations/0004_person_birthday.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/migrations/0005_deposit_dc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/migrations/0006_remove_deposit_dc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/migrations/0007_deposit_dc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/migrations/0008_alter_deposit_dc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/migrations/0009_alter_deposit_dc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/wsgi.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Skityaeva22"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Skityaeva22/python_hometask_5",
+    "accountId": "19fde5e7-486b-439a-8e46-55139a189b12"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2g9LgLOgdquRzbkppg59rHPHCoe" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-0509580d9d50-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.14494.241" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1b9ad880-db38-479b-956d-be0d0672e5fc" name="Changes" comment="" />
+      <created>1715104960778</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715104960778</updated>
+    </task>
+    <servers />
+  </component>
+</project>

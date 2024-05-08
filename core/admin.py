@@ -6,18 +6,10 @@ from core import models
 class Bank(admin.ModelAdmin):
     ('name', 'address')
 
-@admin.register(models.BankOwner)
-class BankOwner(admin.ModelAdmin):
-    ('last_name', 'first_name', 'patronymic', 'email', 'telephone', 'role', 'birthday', 'age', 'bank')
-
-@admin.register(models.Depositor)
-class Depositor(admin.ModelAdmin):
-    ('last_name', 'first_name', 'patronymic', 'email', 'telephone', 'role', 'birthday', 'age', 'bank')
-
 @admin.register(models.Currency)
 class Currency(admin.ModelAdmin):
     ('code', 'name')
 
-@admin.register(models.Deposit)
-class Deposit(admin.ModelAdmin):
-    ('amount', 'depositor', 'currency', 'annual_percentage', 'dc')
+@admin.register(models.Depositor)
+class Depositor(admin.ModelAdmin):
+    ('last_name', 'first_name', 'patronymic', 'email', 'telephone', 'role', 'bank')

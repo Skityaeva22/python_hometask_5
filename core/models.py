@@ -1,8 +1,7 @@
-from dateutil.relativedelta import relativedelta
-from django.utils import timezone
 from datetime import date
 from django.contrib.auth import get_user_model
 from django.db import models
+from django.utils import timezone
 
 User = get_user_model()
 
@@ -17,18 +16,31 @@ class Bank(models.Model):
         verbose_name = 'Банк'
         verbose_name_plural = 'Банки'
 
-class Person(models.Model):
+class Currency(models.Model):
+    code = models.CharField('Кодовой обозначение', max_length=5)
+    name = models.CharField('Наименование', max_length=50)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Валюта'
+        verbose_name_plural = 'Валюты'
+
+class Depositor(models.Model):
     last_name = models.CharField('Фамилия', max_length=100)
     first_name = models.CharField('Имя', max_length=100)
     patronymic = models.CharField('Отчество', max_length=100, blank=True)
     role_choices = [
-        ('owner', 'Владелец'),
-        ('depositor', 'Вкладчик'),
+        ('depositorPremium', 'Вкладчик с высоким рейтингом'),
+        ('depositorNormal', 'Вкладчик с обычным рейтингом'),
+        ('depositorGarbage', 'Вкладчик из черного списка'),
     ]
     email = models.CharField('Почта', max_length=50, blank=True)
     telephone = models.CharField('Телефон', max_length=12, blank=True)
-    role = models.CharField('Роль', max_length=10, choices=role_choices)
-    birthday = models.DateField('День рождения', max_length=10, blank=True, default='')
+    role = models.CharField('Роль', max_length=20, choices=role_choices)
+    birthday = models.DateField('День рождения', null=True, blank=True)
+    bank = models.ForeignKey(Bank, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.get_full_name()
@@ -44,49 +56,6 @@ class Person(models.Model):
             return last_name
         else:
             return 'нет данных'
-
-    @property
-    def age(self):
-        today = date.today()
-        age = relativedelta(today, self.birthday).years
-        return age
-
-    class Meta:
-        verbose_name = 'Персона'
-        verbose_name_plural = 'Персоны'
-
-class BankOwner(Person):
-    bank = models.ForeignKey(Bank, on_delete=models.CASCADE)
-
-    class Meta:
-        verbose_name = 'Владелец'
-        verbose_name_plural = 'Владельцы'
-
-class Depositor(Person):
-    bank = models.ForeignKey(Bank, on_delete=models.CASCADE)
-
     class Meta:
         verbose_name = 'Вкладчик'
         verbose_name_plural = 'Вкладчики'
-
-class Currency(models.Model):
-    code = models.CharField('Кодовой обозначение', max_length=5)
-    name = models.CharField('Наименование', max_length=50)
-
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        verbose_name = 'Валюта'
-        verbose_name_plural = 'Валюты'
-
-class Deposit(models.Model):
-    amount = models.FloatField('Сумма', default=0.00)
-    depositor = models.ForeignKey(Depositor, on_delete=models.CASCADE)
-    currency = models.ForeignKey(Currency, on_delete=models.SET_NULL, null=True)
-    annual_percentage = models.FloatField('Годовой процент', default=0.00)
-    dc = models.DateTimeField('Дата записи', max_length=10, default=timezone.now, blank=True, null=True)
-
-    class Meta:
-        verbose_name = 'Вклад'
-        verbose_name_plural = 'Вклады'
