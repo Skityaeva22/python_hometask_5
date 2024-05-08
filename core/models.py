@@ -59,3 +59,16 @@ class Depositor(models.Model):
     class Meta:
         verbose_name = 'Вкладчик'
         verbose_name_plural = 'Вкладчики'
+
+class Deposit(models.Model):
+    amount = models.FloatField('Сумма', default=0.00)
+    depositor = models.ForeignKey(Depositor, on_delete=models.CASCADE)
+    currency = models.ForeignKey(Currency, on_delete=models.SET_NULL, null=True)
+    annual_percentage = models.FloatField('Годовой процент', default=0.00)
+    dc = models.DateTimeField('Дата записи', null=True, blank=True, default=timezone.now)
+
+    def __str__(self):
+        return f"{self.depositor} - {self.amount} {self.currency.code}"
+    class Meta:
+        verbose_name = 'Вклад'
+        verbose_name_plural = 'Вклады'

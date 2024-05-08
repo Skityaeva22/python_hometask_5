@@ -13,3 +13,7 @@ class Currency(admin.ModelAdmin):
 @admin.register(models.Depositor)
 class Depositor(admin.ModelAdmin):
     ('last_name', 'first_name', 'patronymic', 'email', 'telephone', 'role', 'bank')
+
+@admin.register(models.Deposit)
+class Deposit(admin.ModelAdmin):
+    ('amount', 'depositor', 'currency', 'annual_percentage', 'dc')
